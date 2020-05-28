@@ -5,5 +5,5 @@ def ordered_count(string)
     result << [chr, string.count(chr)]
   end
 
-  result
+  result.uniq
 end

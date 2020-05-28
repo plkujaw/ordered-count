@@ -5,6 +5,7 @@ describe '#ordered_count' do
     expect(ordered_count('a')).to eq([['a', 1]])
     expect(ordered_count('ab')).to eq([['a', 1], ['b', 1]])
     expect(ordered_count('abc')).to eq([['a', 1], ['b', 1], ['c', 1]])
-    
+    expect(ordered_count('aabc')).to eq([['a', 2], ['b', 1], ['c', 1]])
+    expect(ordered_count('aabcc')).to eq([['a', 2], ['b', 1], ['c', 2]])
   end
 end
